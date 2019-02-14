@@ -1,0 +1,69 @@
+{% load static %}
+<html>
+	<head>
+		<title> Home page </title>
+		<meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="{% static 'results/bootstrap.min.css' %}">
+		      <script src="{% static 'results/jquery.min.js' %}"></script>
+		        <script src="{% static 'results/popper.min.js' %}"></script>
+			  <script src="{% static 'results/bootstrap.min.js' %}"></script>
+<style>
+html,body{
+	width:100%;
+        margin:0;
+        height:100%;
+}
+
+</style>
+	</head>
+
+
+	<body>
+<!--		<div class="h-100 container" >
+			<div class="row h-100 justify-content-center align-items-center" style="background:aqua">
+			<h1> Roll number</h1>
+			<form class="col-12">
+				<div class="form-group">
+					<input type="text" id="uni_id"> </input>
+					<br>
+					<input type="submit" value="Submit"/ >
+				</div>
+			</form>
+			</div>
+		</div>
+-->
+
+		<div class="d-flex align-items-center flex-column justify-content-center h-100 bg-dark text-white" id="header">
+		    <h1 class="display-4">Results</h1>
+		    <form action="details" method="get" id="info_form">
+				<div class="form-group">
+				<label for="roll_no-input">Roll Number:</label>
+			    	<input class="form-control form-control-lg" name="roll_no" id="roll_no-input" placeholder="ID" type="text">
+					</br>
+
+				<label for="semester-dropdown">Semester:</label>
+				<select class="form-control" name="semester" id="semester-dropdown">
+					<option>3</option>
+					<option>4</option>
+				</select>
+				<br>
+
+				<div class="form-row text-center">
+					<div class="col-12">
+					<button type="submit" class="btn btn-primary" form="info_form" value="submit">Submit</button>
+					</div>
+				</div>
+
+				</div>
+		</div>
+		
+		<div class="container" id="content">
+		    <div class="row h-100 mt-5">
+			    <main class="col-md-6">
+				<h1>Content...</h1>
+			    </main>
+		    </div>
+		</div>
+</body>
+</html>
